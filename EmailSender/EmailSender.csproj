@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MimeKit" />
+    <None Remove="MailKit" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MimeKit" Version="2.15.0" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
+  </ItemGroup>
+</Project>
