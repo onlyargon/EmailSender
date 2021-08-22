@@ -5,7 +5,7 @@ Install the nuget
 
 Add below object to the `appsettings.json`
 
-`
+```json
 "EmailConfiguration":  {
  "From":  "YOUR_EMAIL",
  "SmtpServer":  "smtp.gmail.com",
@@ -13,17 +13,24 @@ Add below object to the `appsettings.json`
  "UserName":  "YOUR_EMAIL",
  "Password":  "YOUR_APP_PASSWORD"
  }
- `
+ ```
 
-Add below code section to the `startup.cs`
+Add below code section to the ```startup.cs```
 
-`using EmailSender;`
+```c#
+using EmailSender;
+```
 
-And to below code block to the `ConfigureServices` method
-`
-var emailConfig = Configuration.GetSection("EmailConfiguration")
- .Get<EmailConfiguration>();
- services.AddSingleton(emailConfig);
- `
+And to below code block to the ```ConfigureServices``` method
 
-`services.AddScoped<IEmailSender,EmailSender>();`
+```c#
+var emailConfig = Configuration
+                  .GetSection("EmailConfiguration")
+                  .Get<EmailConfiguration>();
+                  
+services.AddSingleton(emailConfig);
+```
+
+```c#
+services.AddScoped<IEmailSender,EmailSender>();
+```
