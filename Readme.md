@@ -1,7 +1,7 @@
 # Usage
 Install the nuget 
 
-    Install-Package Argon.Util.EmailSender -Version 1.0.0
+    Install-Package Argon.Util.EmailSender -Version 1.0.3
 
 Add below object to the `appsettings.json`
 
